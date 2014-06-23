@@ -1,0 +1,16 @@
+{
+  "name": "cudaWebAR",
+  "description": "This is CUDA Web AR.",
+  "version": "0.0.1",
+  "author": "Alexander <alexander@visidyn.com>",
+  "private": true,
+  "engines": { "node": ">= 0.6.0" },
+  "dependencies": {
+    "socketstream": "0.3.x",
+    "ss-stylus": "0.1.x",
+    "ss-hogan": "0.1.x"
+  },
+  "scripts":{
+    "start":"node app.js"
+  }
+}
