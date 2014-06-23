@@ -1,6 +1,3 @@
-// ============ Alexander code ============ //
-
-
 // ====== Request Handling ====== //
 
 // == Live Webcam Stream == //
@@ -62,50 +59,3 @@ var ctx = canvasFrame.getContext('2d')
 ss.event.on('Image Size', function(response) {  // Listen out for newMessage events coming from the server
 	console.log('Client received response: ' + response)
 })
-
-// ============ Sample code ============ //
-
-
-// ====== Request Handling ====== //
-
-$('#chat').on('submit', function() { // Show the chat form and bind to the submit action
-	var text = $('#myMessage').val();  // Grab the message from the text box
-	return exports.sendString(text, function(success) {  // Call the 'send' funtion (below) to ensure it's valid before sending to the server
-		if (success) {
-			return $('#myMessage').val('')
-		} else {
-			return alert('Oops! Unable to send message')
-		}
-	})
-})
-
-exports.sendString = function(text, cb) {  // Demonstrates sharing code between modules by exporting function
-	if (valid(text)) {
-		return ss.rpc('server.sendMessage', text, cb)
-	} else {
-		return cb(false)
-	}
-}
-
-var valid = function(text) {
-	return text && text.length > 0
-}
-
-// ====== Response Handling ====== //
-
-ss.event.on('newMessage', function(message) {  // Listen out for newMessage events coming from the server
-	var html = ss.tmpl['chat-message'].render({  // Example of using the Hogan Template in client/templates/chat/message.jade to generate HTML for each message
-		message: message,
-		time: function() { return timestamp() }
-	});
-	return $(html).hide().appendTo('#chatlog').slideDown()  // Append it to the #chatlog div and show effect
-});
-
-var timestamp = function() {
-	var d = new Date()
-	return d.getHours() + ':' + pad2(d.getMinutes()) + ':' + pad2(d.getSeconds())
-}
-
-var pad2 = function(number) {
-	return (number < 10 ? '0' : '') + number
-}

@@ -1,80 +1,44 @@
-// Example Stylus file
-//
 // Stylus docs:  http://learnboost.github.com/stylus/docs/js.html
 // Nib docs:     http://visionmedia.github.com/nib
 
 @import 'nib'
 
-// Main
-
 body, html
   height 100%
 
 body
+  background linear-gradient(to bottom, #222, #333)
   font normal 1em 'Open Sans',sans-serif
-  background linear-gradient(top, #222, #333)
   text-align center
-  font-spacing 2.5px
-
-p
-  margin-bottom 1em
-
-a
-  color #033a85
 
 h1
   font-size 1.2em
   font-weight normal
-  margin 1.5em
+  margin 50px
+  margin-top 25px
   color #fff
   text-shadow 1px 1px 2px black
-  letter-spacing 45px
+  letter-spacing 25px
+
+figure
+  display inline-block
+  margin-right 1.5em
+  margin-left 1.5em
+  margin-bottom 2em
+  figcaption
+    padding-top 5px
+    font-size 1em
+    font-weight normal
+    color #fff
+    text-shadow 1px 1px 2px black
 
 #content
   padding 50px
 
-#chat
-  border 1px solid #ccc
-  width 700px
-  text-align left
-  margin 50px auto
-  padding 15px
-  border-radius 5px
-  h3
-    color #eee
-    font-size 1em
-    font-weight normal
-    letter-spacing 10px
-  h5
-    padding 5px 0
-    color #eee
-    font-weight normal
-    font-size .8em
+#videoStream, #canvasStream
+  border 1px solid #666
+  box-shadow 0px 0px 25px #555
+  display block
+  margin-left auto
+  margin-right auto
 
-  #myMessage, #chatlog
-    border none
-    box-shadow inset 0 0 2px #777
-    border-radius 5px
-  #myMessage
-    width 690px
-    padding 5px
-  #chatlog
-    text-shadow 3px 3px 2px white
-    width 700px
-    background-color white
-    margin 5px 0
-    p
-      font-size .8em
-      color #000a68
-      padding 3px 9px
-      margin 0
-    p:first-child
-      padding-top 9px
-    p:last-child
-      padding-bottom 9px
-    span.time
-      color #666
-      float right
-      width 70px
-      text-align right
-      font-size .8em

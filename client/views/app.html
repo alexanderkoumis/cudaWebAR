@@ -7,26 +7,18 @@
   </head>
   <body>
     <div id="content">
-
-      <a href="visidyn.com">
+      <a href="http://visidyn.com">
         <img src="/images/visidynAvatar.png" alt="Visidyn Avatar"/>
       </a>
-
       <h1>VISIDYN</h1>
-
-      <div id="video">
-        <video id="videoStream" width="640" height="480" autoplay style="display: inline;"></video>
-      </div>
-
-      <div id="canvas">
-        <canvas id="canvasStream" width="640" height="480" autoplay style="display: inline;"></canvas>"
-      </div>
-
-      <form id="chat" onsubmit="return false">
-        <div id="chatlog"></div>
-        <input id="myMessage" type="text" autocomplete="off">
-      </form> 
-
+      <figure>
+        <video id="videoStream" width="640" height="480" autoplay ></video>
+        <figcaption>Video Stream</figcaption>
+      </figure>
+      <figure>
+        <canvas id="canvasStream" width="640" height="480" autoplay></canvas>
+        <figcaption>Canvas Stream</figcaption>
+      </figure>
     </div>
   </body>
 </html>
