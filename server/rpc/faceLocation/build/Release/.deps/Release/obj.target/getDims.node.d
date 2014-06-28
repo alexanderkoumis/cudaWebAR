@@ -1,0 +1,1 @@
+cmd_Release/obj.target/getDims.node := flock ./Release/linker.lock g++ -shared -pthread -rdynamic  -Wl,-soname=getDims.node -o Release/obj.target/getDims.node -Wl,--start-group Release/obj.target/getDims/getDims.o -Wl,--end-group /usr/lib/libopencv_core.so /usr/lib/libopencv_highgui.so /usr/lib/libopencv_imgproc.so /usr/lib/libopencv_gpu.so

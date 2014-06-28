@@ -1,0 +1,1 @@
+cmd_Release/obj.target/faceLocation.node := flock ./Release/linker.lock g++ -shared -pthread -rdynamic  -Wl,-soname=faceLocation.node -o Release/obj.target/faceLocation.node -Wl,--start-group Release/obj.target/faceLocation/faceLocation.o -Wl,--end-group /usr/lib/libopencv_core.so /usr/lib/libopencv_highgui.so /usr/lib/libopencv_imgproc.so /usr/lib/libopencv_gpu.so

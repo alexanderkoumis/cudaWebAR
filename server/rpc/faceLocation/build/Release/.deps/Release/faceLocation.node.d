@@ -1,0 +1,1 @@
+cmd_Release/faceLocation.node := ln -f "Release/obj.target/faceLocation.node" "Release/faceLocation.node" 2>/dev/null || (rm -rf "Release/faceLocation.node" && cp -af "Release/obj.target/faceLocation.node" "Release/faceLocation.node")

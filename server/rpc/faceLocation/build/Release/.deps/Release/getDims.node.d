@@ -1,0 +1,1 @@
+cmd_Release/getDims.node := ln -f "Release/obj.target/getDims.node" "Release/getDims.node" 2>/dev/null || (rm -rf "Release/getDims.node" && cp -af "Release/obj.target/getDims.node" "Release/getDims.node")
